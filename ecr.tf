@@ -2,6 +2,7 @@
 resource "aws_ecr_repository" "this" {
   name                 = var.name
   image_tag_mutability = var.mutable == true ? "MUTABLE" : "IMMUTABLE"
+  force_delete         = var.force_delete
 
   image_scanning_configuration {
     // This ternary looks unnecessary, but the variable could be null
