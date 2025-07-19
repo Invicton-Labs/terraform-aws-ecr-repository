@@ -64,7 +64,7 @@ output "tags" {
 //==================================================
 output "region" {
   description = "The AWS region that this module was deployed in."
-  value       = data.aws_region.current.name
+  value       = data.aws_region.current.region
 }
 
 output "push_policy_json" {
